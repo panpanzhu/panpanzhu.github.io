@@ -28,6 +28,34 @@ body {
     width: 100%;
     height: 100%;
 }
+.music_ico{
+	width:40px;
+	height: 40px;
+	border: 2px solid white;
+	border-radius: 50%;
+	background:url(../img/music_ico.png)no-repeat center center;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	-webkit-animation: music_rotate 1.5s linear 0s normal none infinite;
+}
+@-webkit-keyframes music_rotate{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+.music_ico2{
+	width:40px;
+	height: 40px;
+	border: 2px solid white;
+	border-radius: 50%;
+	background:url(../img/music_ico.png)no-repeat center center;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+}
+
 .swiper-slide {
     text-align: center;
     
@@ -109,10 +137,11 @@ body {
 	position: absolute;
 	left: 1.8rem;
 	top:7.5rem;
-	text-align: center;
+	/*text-align: center;*/
 }
 .main_cont p{
 	margin:0;
+	text-align: left;
 }
 .main_nav{
 	position: absolute;
@@ -123,6 +152,7 @@ body {
 
 /*第二个页面*/
 .skill{
+	@include flexbox();
 	width:100%;
 }
 .skill_img img{
@@ -140,6 +170,9 @@ body {
 @-webkit-keyframes mov{
 	0%{transform:rotate(0deg);}
 	100%{transform:rotate(360deg);}
+}
+.skill_head{
+	@include flex();
 }
 .skill_border span{
 	position: absolute;
@@ -159,12 +192,13 @@ body {
 	
 }
 .skill_cont{
+	@include flex();
 	width:90%;
 	height:70%;
 }
 .skill_cont ul li:nth-child(1){
 	position: absolute;
-	left:1.5rem;
+	left:1.7rem;
 	top:.8rem;
 }
 .skill_cont ul li:nth-child(1) i{
@@ -221,7 +255,7 @@ body {
 }
 .skill_cont ul li:nth-child(4){
 	position: absolute;
-	left:1.5rem;
+	left:1.7rem;
 	top:7.0rem;
 }
 .skill_cont ul li:nth-child(4) i{

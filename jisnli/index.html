@@ -18,6 +18,9 @@
 		
 			<!-- Swiper -->
 		    <div class="swiper-container">
+		    	<div id="music_ico" class="music_ico">
+        	       <audio id="music"  src="img/Bandari - Moonglow.mp3" autoplay="autoplay"></audio>
+                </div>
 		        <div class="swiper-wrapper">
 		        	<!--第一个页面-->
 		            <div class="swiper-slide main_first">
@@ -46,8 +49,8 @@
 		            	</div>
 		            	<div class="ani main_cont" >
 		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.3s">姓名：朱攀攀</p>
-		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s">年龄：26</p>
-		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s">性别：男</p>
+		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s">年龄：    &nbsp;26</p>
+		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s">性别：    &nbsp;男</p>
 		            	</div>
 		            	<!--指引箭头-->
 		            	<div class="ani main_nav" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay=".5s">
@@ -168,7 +171,7 @@
 		            </div>
 		        </div>
 		        <!-- Add Pagination -->
-		        <div class="swiper-pagination"></div>
+		        
 		    </div>
 		</div>
 		
@@ -194,6 +197,19 @@
 			    },
 			 	watchSlidesProgress: true,
 			})
+		    
+		    
+	    var music_ico=document.getElementById('music_ico');	
+	    var music=document.getElementById('music');
+	        music_ico.onclick=function(){
+		 	    if (music.paused) {
+			 		music.play();
+			 		music_ico.className='music_ico';
+			 	}else{
+			 		music.pause();
+			 		music_ico.className='music_ico2';
+			 	}
+			}
 	    </script>
 	</body>
 </html>
