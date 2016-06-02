@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.music_ico{
+/*.music_ico{
 	width:40px;
 	height: 40px;
 	border: 2px solid white;
@@ -54,7 +54,7 @@ body {
 	top: 10px;
 	right: 10px;
 	z-index: 9999;
-}
+}*/
 
 .swiper-slide {
     text-align: center;
@@ -177,7 +177,7 @@ body {
 .skill_border span{
 	position: absolute;
 	top:0;
-	width:1rem;
+	width:0.9rem;
 	height:70%;
 	
 	border-right:2px solid #11cd6e;
