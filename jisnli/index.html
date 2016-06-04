@@ -18,9 +18,10 @@
 		
 			<!-- Swiper -->
 		    <div class="swiper-container">
-		    	<!--<div id="music_ico" class="music_ico">
-        	       <audio id="music"  src="img/Bandari - Moonglow.mp3"  autoplay="" loop="" preload=""></audio>
-		    	</div>-->
+		    	<div id="music_ico" class="music_ico">
+        	       <audio id="Jaudio"  class="media-audio" src="img/Bandari - Moonglow.mp3"  autoplay="" loop="" preload=""></audio>
+		    	<!--<audio id="Jaudio" class="media-audio" src="assets/music/介绍客户_4.mp3" preload ></audio >--> 
+		    	</div>
 		        <div class="swiper-wrapper">
 		        	<!--第一个页面-->
 		            <div class="swiper-slide main_first">
@@ -196,17 +197,35 @@
 			})
 		    
 		 
-//	    var music_ico=document.getElementById('music_ico');	
-//	    var music=document.getElementById('music');
-//	        music_ico.onclick=function(){
-//		 	    if (music.paused) {
-//			 		music.play();
-//			 		music_ico.className='music_ico';
-//			 	}else{
-//			 		music.pause();
-//			 		music_ico.className='music_ico2';
-//			 	}
-//			}
+	    var music_ico=document.getElementById('music_ico');	
+	    var music=document.getElementById('Jaudio');
+	        music_ico.onclick=function(){
+		 	    if (music.paused) {
+			 		music.play();
+			 		music_ico.className='music_ico';
+			 	}else{
+			 		music.pause();
+			 		music_ico.className='music_ico2';
+			 	}
+			}
+	 
+function audioAutoPlay(id){
+		    	var audio = document.getElementById(id);
+		    	audio.load();
+		        play = function(){
+			        audio.play();
+			        document.removeEventListener("touchstart",play, false);
+		    	};
+		    	audio.play();
+		    	document.addEventListener("WeixinJSBridgeReady", function () {//微信
+		      		play();
+		    	}, false);
+		    	document.addEventListener('YixinJSBridgeReady', function() {//易信
+		            play();
+		        }, false);
+		    	document.addEventListener("touchstart",play, false);
+			}
+			audioAutoPlay('Jaudio');
 	    </script>
 	</body>
 </html>
